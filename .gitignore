@@ -68,6 +68,8 @@ instance/
 # Scrapy stuff:
 .scrapy
 
+/urban_issues_dataset/
+
 # Sphinx documentation
 docs/_build/
 
