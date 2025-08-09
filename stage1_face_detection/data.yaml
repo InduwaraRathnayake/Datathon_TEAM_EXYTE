@@ -1,0 +1,13 @@
+train: dataset/train/images  
+val: dataset/valid/images
+test: dataset/test/images
+
+nc: 2
+names: ['License_Plate', 'face']
+
+roboflow:
+  workspace: datathonanonymization
+  project: face-and-licenses-plates-qldn2
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/datathonanonymization/face-and-licenses-plates-qldn2/dataset/1
