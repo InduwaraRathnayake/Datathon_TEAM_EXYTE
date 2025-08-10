@@ -1,0 +1,11 @@
+python anonymize_cli.py `
+  --in_dir ".....\Datathon\Datathon_TEAM_EXYTE\Stage1_Anonimizer\input_images" `  // add your path
+  --out_dir "......\Datathon\Datathon_TEAM_EXYTE\Stage1_Anonimizer\output_images" `// add your path
+  --use_face 1 `
+  --face_model "......\models\best_face.pt" `// add your path
+  --use_plate 1 `
+  --plate_model "......\models\best_plate.pt" `// add your path
+  --face_mode blur `
+  --plate_mode pixel `
+  --face_margin 0.08 `
+  --plate_margin 0.08
