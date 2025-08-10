@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import os
 
-def infer(image, model_path="stage1_face_detection/pii_detection/face_license_detection_phase2/weights/best.pt"):
+def infer(image, model_path="pii_detection/face_license_detection_phase2/weights/best.pt"):
     """
     Initialize PII Anonymizer
     model_path: Path to your trained YOLO model
@@ -17,4 +17,4 @@ def infer(image, model_path="stage1_face_detection/pii_detection/face_license_de
     results = model(image)
     results[0].show()
 
-infer("stage1_face_detection/dataset/infer/test_image4.jpg")
+infer("dataset/infer/test_image6.jpg")

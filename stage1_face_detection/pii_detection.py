@@ -123,10 +123,10 @@ if __name__ == '__main__':
     model.export(format="onnx")
     
     # Test on a sample image
-    if os.path.exists("stage1_face_detection/dataset/infer/test_image1.jpg"):
+    if os.path.exists("dataset/infer/test_image1.jpg"):
         print("Testing on sample image...")
-        results = model("stage1_face_detection/dataset/infer/test_image1.jpg")
+        results = model("dataset/infer/test_image1.jpg")
         results[0].show()
-        results[0].save("stage1_face_detection/dataset/infer/detection/detection_result.jpg")
+        results[0].save("dataset/infer/detection/detection_result.jpg")
     else:
         print("No test image found. Place a test image as 'test_image1.jpg' to test.")
