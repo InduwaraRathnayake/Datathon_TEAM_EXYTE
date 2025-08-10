@@ -4,10 +4,12 @@ from collections import defaultdict
 
 # Map sub-folder to main category and sub-category
 to_main_sub = {
-    'damage_guardrails': ('Public Safety', 'Broken Guard Rails'),
+    'fallen_trees': ('Public Safety', 'Fallen Trees'),
     'damaged_signs': ('Road Issues', 'Damaged Signs'),
-    'Illegal_Parking': ('Road Issues', 'Illegal Parking'),
-    'vandalism': ('Public Cleanliness', 'Vandalism / Graffiti'),
+    'potholes': ('Road Issues', 'Potholes'),
+    'illegal_parking': ('Road Issues', 'Illegal Parking'),
+    'graffiti': ('Public Cleanliness', 'Graffiti'),
+    'garbage': ('Public Cleanliness', 'Garbage'),
 }
 
 base_dir = 'urban_issues_dataset'

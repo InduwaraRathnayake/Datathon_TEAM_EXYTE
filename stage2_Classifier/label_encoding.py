@@ -2,10 +2,12 @@ import pandas as pd
 
 # Define all possible sub-categories
 SUB_CATEGORIES = [
-    'Broken Guard Rails',
+    'Potholes',
     'Damaged Signs',
+    'Fallen Trees',
+    'Graffiti',
+    'Garbage',
     'Illegal Parking',
-    'Vandalism / Graffiti',
 ]
 
 # Read the multi-label CSV
