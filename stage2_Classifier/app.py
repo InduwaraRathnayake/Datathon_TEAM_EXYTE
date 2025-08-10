@@ -5,16 +5,20 @@ import numpy as np
 
 # Define sub-categories and mapping to main categories
 SUB_CATEGORIES = [
-    'Broken Guard Rails',
+    'Potholes',
     'Damaged Signs',
+    'Fallen Trees',
+    'Graffiti',
+    'Garbage',
     'Illegal Parking',
-    'Vandalism / Graffiti',
 ]
 MAIN_CATEGORY_MAP = {
-    'Broken Guard Rails': 'Public Safety',
-    'Damaged Signs': 'Road Issues',
+    'Potholes': 'Road Issues',
+    'Damaged Signs': 'Public Safety',
+    'Fallen Trees': 'Public Safety',
+    'Graffiti': 'Public Cleanliness',
+    'Garbage': 'Public Cleanliness',
     'Illegal Parking': 'Road Issues',
-    'Vandalism / Graffiti': 'Public Cleanliness',
 }
 
 # Load trained model
@@ -25,13 +29,13 @@ uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     img = load_img(uploaded_file, target_size=(224, 224))
-    st.image(img, caption='Uploaded Image', use_column_width=True)
+    st.image(img, caption='Uploaded Image', width=400)
     img_array = img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
     # Predict
     preds = model.predict(img_array)[0]
-    threshold = 0.5  # You can adjust this threshold
+    threshold = 0.4  # You can adjust this threshold
     detected_subs = [SUB_CATEGORIES[i] for i, p in enumerate(preds) if p > threshold]
     detected_mains = sorted(set([MAIN_CATEGORY_MAP[sub] for sub in detected_subs]))
 
